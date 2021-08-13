@@ -1,0 +1,22 @@
+School
+
+An English-language school needs software to manage students, and register these students to classes.
+
+MVP
+The school needs to:
+- create and edit members
+- create and edit courses
+- enrol students on specific courses
+- show a list of upcoming courses
+- show a list of students booked onto a specific course
+
+DO NOT MOVE ON UNTIL THIS WORKS AND LOOKS OK!!!
+
+Extensions:
+- Courses have a maximum capacity and students can only be added whilst there is space remaining.
+- The DB has current and former students, with former students not appearing when creating bookings.
+- Once students have completed X number of hours, they automatically move up a level.
+- Current students also have free access to socials.
+- Add a Teacher class, with teachers assigned courses to teach.
+- Teachers can also teach individual students. 
+- Teachers can't exceed 22 hours of teaching time per week.
