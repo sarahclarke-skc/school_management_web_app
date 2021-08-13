@@ -6,7 +6,7 @@ MVP
 The school needs to:
 - create and edit members
 - create and edit courses
-- enrol students on specific courses
+- enroll students on specific courses
 - show a list of upcoming courses
 - show a list of students booked onto a specific course
 
@@ -20,3 +20,4 @@ Extensions:
 - Add a Teacher class, with teachers assigned courses to teach.
 - Teachers can also teach individual students. 
 - Teachers can't exceed 22 hours of teaching time per week.
+- Monitor payment
