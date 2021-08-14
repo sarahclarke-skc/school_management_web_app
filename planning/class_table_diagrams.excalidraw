@@ -421,8 +421,8 @@
     },
     {
       "type": "text",
-      "version": 393,
-      "versionNonce": 28718925,
+      "version": 419,
+      "versionNonce": 928060079,
       "isDeleted": false,
       "id": "DxYKzPPu0Cp8QBWpPlLqL",
       "fillStyle": "hachure",
@@ -436,7 +436,7 @@
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 330,
-      "height": 200,
+      "height": 225,
       "seed": 41378240,
       "groupIds": [],
       "strokeSharpness": "sharp",
@@ -445,8 +445,8 @@
       ],
       "fontSize": 20,
       "fontFamily": 1,
-      "text": "id : SERIAL PK\ndescription : VARCHAR (255)\ndays : VARCHAR (255)\nstart_time : VARCHAR (tbd)\nduration: INT\nlength_of_course: VARCHAR(255)\n\n",
-      "baseline": 193,
+      "text": "id : SERIAL PK\ndescription : VARCHAR (255)\nlevel : VARCHAR (255)\ndays : VARCHAR (255)\nstart_time : VARCHAR (tbd)\nduration: INT\nlength_of_course: VARCHAR(255)\n\n",
+      "baseline": 218,
       "textAlign": "left",
       "verticalAlign": "top"
     },
@@ -698,8 +698,8 @@
     },
     {
       "type": "text",
-      "version": 167,
-      "versionNonce": 125099373,
+      "version": 191,
+      "versionNonce": 40017409,
       "isDeleted": false,
       "id": "U5PgiHH4mhJ9rbYhWZBDj",
       "fillStyle": "hachure",
@@ -713,15 +713,15 @@
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 226,
-      "height": 175,
+      "height": 200,
       "seed": 855826880,
       "groupIds": [],
       "strokeSharpness": "sharp",
       "boundElementIds": [],
       "fontSize": 20,
       "fontFamily": 1,
-      "text": "description : Str\ndays : Str\nstart_time : Str (tbd)\nduration : INT\nlength_of_course: Str\n\nid : INT / None",
-      "baseline": 168,
+      "text": "description : Str\nlevel : VARCHAR (255)\ndays : Str\nstart_time : Str (tbd)\nduration : INT\nlength_of_course: Str\n\nid : INT / None",
+      "baseline": 193,
       "textAlign": "left",
       "verticalAlign": "top"
     },
@@ -773,8 +773,8 @@
     },
     {
       "type": "arrow",
-      "version": 214,
-      "versionNonce": 1105970605,
+      "version": 266,
+      "versionNonce": 1631439,
       "isDeleted": false,
       "id": "BF8dzT3HDQmH1IvaAYc_V",
       "fillStyle": "hachure",
@@ -784,11 +784,11 @@
       "opacity": 100,
       "angle": 0,
       "x": 1040.795654296875,
-      "y": 189.9120135216223,
+      "y": 192.9724826769874,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 79.01361083984375,
-      "height": 9.870433901089172,
+      "height": 8.916523376526044,
       "seed": 1199532608,
       "groupIds": [],
       "strokeSharpness": "round",
@@ -813,7 +813,7 @@
         ],
         [
           -79.01361083984375,
-          9.870433901089172
+          8.916523376526044
         ]
       ]
     }
