@@ -9,4 +9,4 @@ courses_blueprint = Blueprint("courses", __name__)
 @courses_blueprint.route('/courses')
 def list_all_courses():
     courses = course_repository.select_all()
-    return render_template('courses/index.html')
+    return render_template('courses/index.html', courses = courses)

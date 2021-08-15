@@ -11,15 +11,16 @@ def save(course):
 #select all
 
 def select_all():
-    course =[]
+    courses =[]
+
     sql = "SELECT * FROM courses"
-    results = run_sql
+    results = run_sql(sql)
 
     for row in results:
         course = Course(results['name'], results['level'], results['days'], results['start_time'], results['duration'], results['length_of_course'], results['id'])
         results.append(course)
-        
-    return course
+
+    return courses
 
 #select one according to id
 
