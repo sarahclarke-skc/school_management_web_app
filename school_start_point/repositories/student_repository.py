@@ -22,7 +22,13 @@ def select_all():
     return student
 
 #select one according to id
-
+def select(id):
+    sql = "SELECT * FROM students WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+    student = Student(result["first_name"], result["last_name"], result["email"], result["telephone"], result["level"], result["enrolled"], result["id"])
+    return student
+    
 #delete all
 def delete_all():
     sql = "DELETE FROM students"
