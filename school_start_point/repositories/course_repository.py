@@ -8,6 +8,7 @@ def save(course):
     sql = "INSERT INTO courses(name, level, days, start_time, duration, length_of_course) VALUES (%s, %s, %s, %s, %s, %s) RETURNING id"
     values = [course.name, course.level, course.days, course.start_time, course.duration, course.length_of_course]
     results = run_sql(sql, values)
+    course.id = results[0]['id']
     return course
 
 #select all
