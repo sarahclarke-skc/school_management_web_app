@@ -1,3 +1,4 @@
+from pdb import run
 from db.run_sql import run_sql
 from models.student import Student
 from models.course import Course
@@ -9,8 +10,16 @@ def save(student):
     results = run_sql(sql, values)
     id = results[0]['id']
     student.id = id
-    return student
+
 #select all
+def select_all():
+    students = []
+    sql = "SELECT * FROM students"
+    results = run(sql)
+    for result in results:
+        student = Student(result["first_name"], result["last_name"], result["email"], result["telephone"], result["level"], result["enrolled"], result["id"])
+        students.append(student)
+    return student
 
 #select one according to id
 

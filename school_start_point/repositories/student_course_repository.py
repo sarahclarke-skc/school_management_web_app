@@ -16,6 +16,12 @@ def save(student_course):
     return student_course
 
 #select all
+# def select_all():
+#     student_courses = []
+#     sql = "SELECT * FROM student_courses"
+#     results = run_sql(sql)
+#     for result in results:
+#         student = student_repository.select
 
 #select according to id
 
