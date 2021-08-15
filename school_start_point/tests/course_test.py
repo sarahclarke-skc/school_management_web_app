@@ -7,3 +7,6 @@ class TestCourse(unittest.TestCase):
 
     def test_course_has_name(self):
         self.assertEqual("English File", self.course.name)
+    
+    def test_course_has_level(self):
+        self.assertEqual("Upper Intermediate", self.course.level)
