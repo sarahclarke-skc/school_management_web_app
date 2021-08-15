@@ -41,7 +41,16 @@ def delete_all():
     run_sql(sql)
 
 #delete one according to id
+def delete(id):
+    sql = "DELTE FROM courses WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
 
 #update the course
+def update(course):
+    sql = "UPDATE courses SET (name, level, days, start_time, duration, length_of_course) = (%s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [course.name, course.level, course.days, course.start_time, course.duration, course.length_of_course, course.id]
+    run_sql(sql, values)
 
 #find the students enrolled on the course
+
