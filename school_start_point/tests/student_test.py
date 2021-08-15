@@ -13,5 +13,8 @@ class TestStudent(unittest.TestCase):
 
     def test_student_has_email(self):
         self.assertEqual("aartiukov@gmail.com", self.student.email)
+    
+    def test_student_has_telephone(self):
+        self.assertEqual("+7911231234", self.student.telephone)
 
     #write method to join first and last name
