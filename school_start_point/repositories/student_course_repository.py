@@ -6,10 +6,10 @@ import repositories.student_repository as student_repository
 from models.course import Course
 import repositories.course_repository as course_repository
 
-#save - add student to course
+#save - add student to course --> RETURNING *?
 def save(student_course):
     sql = "INSERT INTO student_courses(student_id, course_id, student_course.grade) VALUES (%s, %s, %s) RETURNING id"
-    values = [student_course.student.id, student_course.course.id]
+    values = [student_course.student.id, student_course.course.id, student_course.grade]
     results = run_sql(sql, values)
     id = results[0]['id']
     student_course.id = id
