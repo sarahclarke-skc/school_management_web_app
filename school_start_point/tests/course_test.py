@@ -16,3 +16,6 @@ class TestCourse(unittest.TestCase):
     
     def test_course_has_start_time(self):
         self.assertEqual("19:30", self.course.start_time)
+
+    def test_course_has_duration(self):
+        self.assertEqual(90, self.course.duration)
