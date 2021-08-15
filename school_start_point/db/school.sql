@@ -24,7 +24,7 @@ CREATE TABLE courses(
 
 CREATE TABLE student_courses(
     id SERIAL PRIMARY KEY,
-    student_id INT REFERENCES students(id) ON DELETE CASCADE,
-    course_id INT REFERENCES courses(id) ON DELETE CASCADE,
+    student_id SERIAL REFERENCES students(id) ON DELETE CASCADE,
+    course_id SERIAL REFERENCES courses(id) ON DELETE CASCADE,
     grade VARCHAR(255)
 );

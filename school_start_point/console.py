@@ -1,11 +1,13 @@
 import pdb
-from models.course import Course
-from models.student_course import Student_Course
-from models.student import Student
 
+from models.course import Course
 import repositories.course_repository as course_repository
-import repositories.student_course_repository as student_course_repository
+
+from models.student import Student
 import repositories.student_repository as student_repository
+
+from models.student_course import Student_Course
+import repositories.student_course_repository as student_course_repository
 
 #once created add student_repository.delete_all()
 #then course_repository.delete_all()
