@@ -10,6 +10,7 @@ def save(course):
     results = run_sql(sql, values)
     id = results[0]['id']
     course.id = id
+    return course
 
 #select all
 
@@ -19,13 +20,20 @@ def select_all():
     sql = "SELECT * FROM courses"
     results = run_sql(sql)
 
-    for row in results:
-        course = Course(row['name'], row['level'], row['days'], row['start_time'], row['duration'], row['length_of_course'], row['id'])
-        results.append(course)
+    for result in results:
+        course = Course(result['name'], result['level'], result['days'], result['start_time'], result['duration'], result['length_of_course'], result['id'])
+        courses.append(course)
 
     return courses
 
 #select one according to id
+
+def select(id):
+    sql = "SELECT * FROM courses WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+    course = Course(result['name'], result['level'], result['days'], result['start_time'], result['duration'], result['length_of_course'], result['id'])
+    return course
 
 #delete all
 def delete_all():

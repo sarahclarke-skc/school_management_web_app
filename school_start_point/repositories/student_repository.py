@@ -9,6 +9,7 @@ def save(student):
     results = run_sql(sql, values)
     id = results[0]['id']
     student.id = id
+    return student
 #select all
 
 #select one according to id

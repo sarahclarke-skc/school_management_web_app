@@ -1,11 +1,10 @@
 from db.run_sql import run_sql
 
-from models.course import Course
-from models.student import Student
 from models.student_course import Student_Course
-
-import repositories.course_repository as course_repository
+from models.student import Student
 import repositories.student_repository as student_repository
+from models.course import Course
+import repositories.course_repository as course_repository
 
 #save - add student to course
 def save(student_course):
@@ -14,6 +13,7 @@ def save(student_course):
     results = run_sql(sql, values)
     id = results[0]['id']
     student_course.id = id
+    return student_course
 
 #select all
 
