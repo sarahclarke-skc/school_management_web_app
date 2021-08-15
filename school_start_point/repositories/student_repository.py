@@ -12,7 +12,7 @@ def save(student):
     student.id = id
 
 #select all - might be nice to put them in alphabetical order
-#something wrong with this function '/students' route not working
+
 def select_all():
     students =[]
 
