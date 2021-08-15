@@ -1,3 +1,4 @@
+from pdb import run
 from db.run_sql import run_sql
 
 from models.student_course import Student_Course
@@ -34,5 +35,9 @@ def delete_all():
     sql = "DELETE FROM student_courses"
     run_sql(sql)
 #delete according to id
+def delete(id):
+    sql = "DELETE FROM student_courses WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
 
 #update
