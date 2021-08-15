@@ -10,3 +10,6 @@ class TestCourse(unittest.TestCase):
     
     def test_course_has_level(self):
         self.assertEqual("Upper Intermediate", self.course.level)
+    
+    def test_course_has_days(self):
+        self.assertEqual("Tuesday Thursday", self.course.days)
