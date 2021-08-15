@@ -13,3 +13,6 @@ class TestCourse(unittest.TestCase):
     
     def test_course_has_days(self):
         self.assertEqual("Tuesday Thursday", self.course.days)
+    
+    def test_course_has_start_time(self):
+        self.assertEqual("19:30", self.course.start_time)
