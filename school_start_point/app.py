@@ -1,5 +1,8 @@
 from flask import Flask, render_template
-from controllers.
+from controllers.student_courses_controller import student_courses_blueprint
+from controllers.courses_controller import courses_blueprint
+from controllers.students_controller import students_blueprint
+
 app = Flask(__name__)
 
 app.register_blueprint(courses_blueprint)
