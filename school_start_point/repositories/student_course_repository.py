@@ -33,9 +33,11 @@ def select(id):
     sql = "SELECT * FROM student_courses WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
-    student = student_repository.select(result["student_id"])
-    course = course_repository.select(result["course_id"])
-    student_course = Student_Course(student, course, result["id"])
+
+    if result is not None:
+        student = student_repository.select(result["student_id"])
+        course = course_repository.select(result["course_id"])
+        student_course = Student_Course(student, course, result["id"])
     return student_course
 
 #delete all
