@@ -1,10 +1,8 @@
-class Student:
-
-    def __init__(self, first_name, last_name, email, telephone, level, enrolled, id=None):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.email = email
-        self.telephone = telephone
+class Course:
+    def __init__(self, description, level, days, start_time, duration, length_of_course):
+        self.description = description
         self.level = level
-        self.enrolled = enrolled
-        self.id = id
+        self.days = days
+        self.start_time = start_time
+        self.duration = duration
+        self.length_of_course = length_of_course
