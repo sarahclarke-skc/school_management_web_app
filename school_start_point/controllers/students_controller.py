@@ -26,3 +26,22 @@ def create_student():
 def edit_student(id):
     student = student_repository.select(id)
     return render_template("students/edit.html", student = student)
+
+#Update
+@students_blueprint.route("/students/<id>", methods=["POST"])
+def update_student(id):
+    #insert code
+    first_name = request.form["first_name"]
+    last_name = request.form["last_name"]
+    email = request.form["last_name"]
+    telephone = request.form["telephone"]
+    #not sure about level or enrolled b/c want a dropdown
+    level = request.form["level"]
+    enrolled = request.form["enrolled"]
+    student = Student(first_name, last_name, email, telephone, level, enrolled, id)
+    student_repository.update(student)
+    return redirect("/students")
+
+#Delete
+
+#Show
