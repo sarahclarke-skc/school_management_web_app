@@ -22,3 +22,6 @@ class TestCourse(unittest.TestCase):
     
     def test_course_has_length_of_course(self):
         self.assertEqual("36 weeks", self.course.length_of_course)
+
+    def test_course_has_id(self):
+        self.assertEqual(None, self.course.id)
