@@ -11,7 +11,7 @@ def save(student):
     id = results[0]['id']
     student.id = id
 
-#select all
+#select all - might be nice to put them in alphabetical order
 def select_all():
     students = []
     sql = "SELECT * FROM students"

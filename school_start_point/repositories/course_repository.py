@@ -12,7 +12,7 @@ def save(course):
     course.id = id
     return course
 
-#select all
+#select all - might be nice to put them in alphabetical order
 
 def select_all():
     courses =[]
