@@ -14,7 +14,9 @@ import repositories.student_repository as student_repository
 #select according to id
 
 #delete all
-
+def delete_all():
+    sql = "DELETE FROM student_courses"
+    run_sql(sql)
 #delete according to id
 
 #update
