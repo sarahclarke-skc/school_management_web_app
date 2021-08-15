@@ -28,13 +28,17 @@ def select(id):
     result = run_sql(sql, values)[0]
     student = Student(result["first_name"], result["last_name"], result["email"], result["telephone"], result["level"], result["enrolled"], result["id"])
     return student
-    
+
 #delete all
 def delete_all():
     sql = "DELETE FROM students"
     run_sql(sql)
 
 #delete one according to id
+def delete(id):
+    sql = "DELETE FROM students WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
 
 #update student
 
