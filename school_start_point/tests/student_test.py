@@ -19,5 +19,8 @@ class TestStudent(unittest.TestCase):
     
     def test_student_has_level(self):
         self.assertEqual("Upper Intermediate", self.student.level)
+    
+    def test_student_has_id(self):
+        self.assertEqual(None, self.student.id)
 
     #write method to join first and last name
