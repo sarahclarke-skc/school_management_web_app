@@ -7,7 +7,7 @@ import repositories.student_repository as student_repository
 from models.course import Course
 import repositories.course_repository as course_repository
 
-#save - add student to course --> RETURNING *?
+#save
 def save(student_course):
     sql = "INSERT INTO student_courses(student_id, course_id, grade) VALUES (%s, %s, %s) RETURNING id"
     values = [student_course.student.id, student_course.course.id, student_course.grade]
@@ -29,6 +29,14 @@ def select_all():
     return student_courses
 
 #select according to id
+def select(id):
+    sql = "SELECT * FROM student_courses WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+    student = student_repository.select(result["student_id"])
+    course = course_repository.select(result["course_id"])
+    student_course = Student_Course(student, course, result["id"])
+    return student_course
 
 #delete all
 def delete_all():
