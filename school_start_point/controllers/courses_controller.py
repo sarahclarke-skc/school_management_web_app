@@ -35,11 +35,10 @@ def update_course(id):
     #see how this works for dropdowns
     level = request.form["level"]
     days = request.form["days"]
-    #why is start_time a different colour?
     start_time = request.form["start_time"]
     duration = request.form["duration"]
     length_of_course = request.form["length_of_course"]
-    course = Course(name, level, days, duration, length_of_course, id)
+    course = Course(name, level, days, start_time, duration, length_of_course, id)
     course_repository.update(course)
     return redirect("/courses")
 
