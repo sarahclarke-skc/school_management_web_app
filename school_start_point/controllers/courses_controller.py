@@ -25,7 +25,7 @@ def create_course():
 @courses_blueprint.route("/courses/<id>/edit")
 def edit_course(id):
     course = course_repository.select(id)
-    return render_template("sessions/edit.html", course = course)
+    return render_template("courses/edit.html", course = course)
 
 #Update
 

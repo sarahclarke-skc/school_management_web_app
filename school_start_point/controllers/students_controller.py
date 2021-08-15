@@ -15,3 +15,14 @@ def students():
 @students_blueprint.route("/students/new")
 def new_student():
     return render_template("students/new.html")
+
+#Create
+@students_blueprint.route("/students", methods = ["POST"])
+def create_student():
+    pass
+
+#Edit
+@students_blueprint.route("/students/<id>/edit")
+def edit_student(id):
+    student = student_repository.select(id)
+    return render_template("students/edit.html", student = student)
