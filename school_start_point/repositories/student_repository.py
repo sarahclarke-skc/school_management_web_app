@@ -7,6 +7,7 @@ def save(student):
     sql = "INSERT INTO students(first_name, last_name, email, telephone, level, enrolled) VALUES (%s, %s, %s, %s, %s, %s) RETURNING id"
     values = [student.first_name, student.last_name, student.email, student.telephone, student.level, student.enrolled]
     results = run_sql(sql, values)
+    student.id = results[0]['id']
     return student
 #select all
 
