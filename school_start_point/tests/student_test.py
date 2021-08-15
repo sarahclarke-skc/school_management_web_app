@@ -24,3 +24,7 @@ class TestStudent(unittest.TestCase):
         self.assertEqual(None, self.student.id)
 
     #write method to join first and last name
+
+    def test_get_full_name(self):
+        student = self.student
+        self.assertEqual("Anton Artiukov", self.student.get_full_name(student))

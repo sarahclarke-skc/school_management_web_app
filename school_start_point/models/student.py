@@ -8,3 +8,7 @@ class Student:
         self.level = level
         self.enrolled = enrolled
         self.id = id
+    
+    def get_full_name(self, student):
+        full_name = self.first_name + " " + self.last_name
+        return full_name
