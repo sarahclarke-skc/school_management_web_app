@@ -3,7 +3,11 @@ from models.student import Student
 from models.course import Course
 
 #save
-
+def save(student):
+    sql = "INSERT INTO students(first_name, last_name, email, telephone, level, enrolled) VALUES (%s, %s, %s, %s, %s, %s) RETURNING id"
+    values = [student.first_name, student.last_name, student.email, student.telephone, student.level, student.enrolled]
+    results = run_sql(sql, values)
+    return student
 #select all
 
 #select one according to id
