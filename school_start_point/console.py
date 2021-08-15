@@ -32,6 +32,7 @@ course_repository.save(course)
 course_2 = Course("English File", "Intermediate", "Wednesday Friday", "19:15", 120, "30 weeks")
 course_repository.save(course_2)
 
+#This below causes an error!
 student_course = Student_Course(student, course, "A")
 student_course_repository.save(student_course)
 
