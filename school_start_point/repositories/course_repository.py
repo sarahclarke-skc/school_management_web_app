@@ -25,6 +25,9 @@ def select_all():
 #select one according to id
 
 #delete all
+def delete_all():
+    sql = "DELETE * FROM courses"
+    run_sql(sql)
 
 #delete one according to id
 
