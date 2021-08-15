@@ -421,8 +421,8 @@
     },
     {
       "type": "text",
-      "version": 419,
-      "versionNonce": 928060079,
+      "version": 434,
+      "versionNonce": 132835809,
       "isDeleted": false,
       "id": "DxYKzPPu0Cp8QBWpPlLqL",
       "fillStyle": "hachure",
@@ -445,7 +445,7 @@
       ],
       "fontSize": 20,
       "fontFamily": 1,
-      "text": "id : SERIAL PK\ndescription : VARCHAR (255)\nlevel : VARCHAR (255)\ndays : VARCHAR (255)\nstart_time : VARCHAR (tbd)\nduration: INT\nlength_of_course: VARCHAR(255)\n\n",
+      "text": "id : SERIAL PK\nname : VARCHAR (255)\nlevel : VARCHAR (255)\ndays : VARCHAR (255)\nstart_time : VARCHAR (tbd)\nduration: INT\nlength_of_course: VARCHAR(255)\n\n",
       "baseline": 218,
       "textAlign": "left",
       "verticalAlign": "top"
@@ -698,8 +698,8 @@
     },
     {
       "type": "text",
-      "version": 191,
-      "versionNonce": 40017409,
+      "version": 206,
+      "versionNonce": 1929917601,
       "isDeleted": false,
       "id": "U5PgiHH4mhJ9rbYhWZBDj",
       "fillStyle": "hachure",
@@ -720,7 +720,7 @@
       "boundElementIds": [],
       "fontSize": 20,
       "fontFamily": 1,
-      "text": "description : Str\nlevel : VARCHAR (255)\ndays : Str\nstart_time : Str (tbd)\nduration : INT\nlength_of_course: Str\n\nid : INT / None",
+      "text": "name : Str\nlevel : VARCHAR (255)\ndays : Str\nstart_time : Str (tbd)\nduration : INT\nlength_of_course: Str\n\nid : INT / None",
       "baseline": 193,
       "textAlign": "left",
       "verticalAlign": "top"
@@ -773,8 +773,8 @@
     },
     {
       "type": "arrow",
-      "version": 266,
-      "versionNonce": 1631439,
+      "version": 296,
+      "versionNonce": 227870145,
       "isDeleted": false,
       "id": "BF8dzT3HDQmH1IvaAYc_V",
       "fillStyle": "hachure",
@@ -784,11 +784,11 @@
       "opacity": 100,
       "angle": 0,
       "x": 1040.795654296875,
-      "y": 192.9724826769874,
+      "y": 192.97248267698762,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 79.01361083984375,
-      "height": 8.916523376526044,
+      "height": 8.916523376525959,
       "seed": 1199532608,
       "groupIds": [],
       "strokeSharpness": "round",
@@ -813,7 +813,7 @@
         ],
         [
           -79.01361083984375,
-          8.916523376526044
+          8.916523376525959
         ]
       ]
     }
