@@ -10,3 +10,8 @@ students_blueprint = Blueprint("students", __name__)
 def students():
     students = student_repository.select_all()
     return render_template("students/index.html", students = students)
+
+#New
+@students_blueprint.route("/students/new")
+def new_student():
+    return render_template("students/new.html")
