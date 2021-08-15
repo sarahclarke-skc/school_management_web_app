@@ -14,7 +14,7 @@ CREATE TABLE students(
 
 CREATE TABLE courses(
     id SERIAL PRIMARY KEY,
-    description VARCHAR(255),
+    name VARCHAR(255),
     level VARCHAR(255),
     days VARCHAR(255),
     start_time VARCHAR(255),
