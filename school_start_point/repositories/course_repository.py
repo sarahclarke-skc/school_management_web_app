@@ -20,7 +20,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        course = Course(results['name'], results['level'], results['days'], results['start_time'], results['duration'], results['length_of_course'], results['id'])
+        course = Course(row['name'], row['level'], row['days'], row['start_time'], row['duration'], row['length_of_course'], row['id'])
         results.append(course)
 
     return courses
