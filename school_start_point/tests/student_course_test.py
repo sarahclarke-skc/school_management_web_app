@@ -1,6 +1,15 @@
 import unittest
 from models.student_course import Student_Course
+from models.student import Student
+from models.course import Course
 
 class TestStudent_Course(unittest.TestCase):
     def setUp(self):
-        self.student_course = Student_Course("Anton Artiukov", "English File", "A")
+        #I don't think this is right
+        self.student = Student("Anton", "Artiukov", "aartiukov@gmail.com", "+7911231234", "Upper Intermediate", True)
+        self.course = Course("English File", "Upper Intermediate", "Tuesday Thursday", "19:30", 90, "36 weeks")
+        self.student_course = Student_Course(self.student, self.course, "A")
+    
+    def test_student_course_has_student(self):
+        student = self.student
+        self.assertEqual("Anton Artiukov", self.student_course.student.get_full_name(student))
