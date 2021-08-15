@@ -3,4 +3,5 @@ class Student_Course:
         self.student = student
         self.course = course
         self.course = course
+        self.grade = grade
         self.id = id

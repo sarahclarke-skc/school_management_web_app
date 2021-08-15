@@ -16,3 +16,6 @@ class TestStudent_Course(unittest.TestCase):
     
     def test_student_course_has_course(self):
         self.assertEqual(self.course, self.student_course.course)
+    
+    def test_student_course_has_grade(self):
+        self.assertEqual("A", self.student_course.grade)
