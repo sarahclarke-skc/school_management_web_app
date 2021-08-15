@@ -13,3 +13,6 @@ class TestStudent_Course(unittest.TestCase):
     def test_student_course_has_student(self):
         student = self.student
         self.assertEqual("Anton Artiukov", self.student_course.student.get_full_name(student))
+    
+    def test_student_course_has_course(self):
+        self.assertEqual(self.course, self.student_course.course)
