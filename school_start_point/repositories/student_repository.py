@@ -9,6 +9,9 @@ from models.course import Course
 #select one according to id
 
 #delete all
+def delete_all():
+    sql = "DELETE FROM students"
+    run_sql(sql)
 
 #delete one according to id
 
