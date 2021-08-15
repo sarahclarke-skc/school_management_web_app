@@ -28,7 +28,25 @@ def edit_course(id):
     return render_template("courses/edit.html", course = course)
 
 #Update
+@courses_blueprint.route("/courses/<id>", methods=["POST"])
+def update_course(id):
+    #insert code
+    name = request.form["name"]
+    #see how this works for dropdowns
+    level = request.form["level"]
+    days = request.form["days"]
+    start_time = request.form["start_time"]
+    duration = request.form["duration"]
+    length_of_course = request.form["length_of_course"]
+    course = Course(name, level, days, duration, length_of_course, id)
+    course_repository.update(course)
+    return redirect("/courses")
 
 #Delete
+@courses_blueprint.route("/courses/<id>/delete", methods=["POST"])
+def delete_course(id):
+    course_repository.delete(id)
+    return redirect("/courses")
+
 
 #Show
