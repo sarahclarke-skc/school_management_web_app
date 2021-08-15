@@ -11,4 +11,7 @@ class TestStudent(unittest.TestCase):
     def test_student_has_last_name(self):
         self.assertEqual("Artiukov", self.student.last_name)
 
+    def test_student_has_email(self):
+        self.assertEqual("aartiukov@gmail.com", self.student.email)
+
     #write method to join first and last name
