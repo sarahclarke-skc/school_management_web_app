@@ -12,10 +12,11 @@ def save(student):
     student.id = id
 
 #select all - might be nice to put them in alphabetical order
+#something wrong with this function '/students' route not working
 def select_all():
-    students = []
+    students =[]
     sql = "SELECT * FROM students"
-    results = run(sql)
+    results = run_sql(sql)
     for result in results:
         student = Student(result["first_name"], result["last_name"], result["email"], result["telephone"], result["level"], result["enrolled"], result["id"])
         students.append(student)
