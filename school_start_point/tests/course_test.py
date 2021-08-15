@@ -19,3 +19,6 @@ class TestCourse(unittest.TestCase):
 
     def test_course_has_duration(self):
         self.assertEqual(90, self.course.duration)
+    
+    def test_course_has_length_of_course(self):
+        self.assertEqual("36 weeks", self.course.length_of_course)
