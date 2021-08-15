@@ -19,3 +19,6 @@ class TestStudent_Course(unittest.TestCase):
     
     def test_student_course_has_grade(self):
         self.assertEqual("A", self.student_course.grade)
+    
+    def test_student_course_has_id(self):
+        self.assertEqual(None, self.student_course.id)
