@@ -15,12 +15,15 @@ def save(student):
 #something wrong with this function '/students' route not working
 def select_all():
     students =[]
+
     sql = "SELECT * FROM students"
     results = run_sql(sql)
+
     for result in results:
-        student = Student(result["first_name"], result["last_name"], result["email"], result["telephone"], result["level"], result["enrolled"], result["id"])
+        student = Student(result['first_name'], result['last_name'], result['email'], result['telephone'], result['level'], result['enrolled'], result['id'])
         students.append(student)
-    return student
+
+    return students
 
 #select one according to id
 def select(id):
