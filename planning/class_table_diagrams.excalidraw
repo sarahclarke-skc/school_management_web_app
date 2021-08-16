@@ -698,8 +698,8 @@
     },
     {
       "type": "text",
-      "version": 206,
-      "versionNonce": 1929917601,
+      "version": 228,
+      "versionNonce": 278452708,
       "isDeleted": false,
       "id": "U5PgiHH4mhJ9rbYhWZBDj",
       "fillStyle": "hachure",
@@ -720,7 +720,7 @@
       "boundElementIds": [],
       "fontSize": 20,
       "fontFamily": 1,
-      "text": "name : Str\nlevel : VARCHAR (255)\ndays : Str\nstart_time : Str (tbd)\nduration : INT\nlength_of_course: Str\n\nid : INT / None",
+      "text": "name : Str\nlevel : Str\ndays : Str\nstart_time : Str (tbd)\nduration : INT\nlength_of_course: Str\n\nid : INT / None",
       "baseline": 193,
       "textAlign": "left",
       "verticalAlign": "top"
