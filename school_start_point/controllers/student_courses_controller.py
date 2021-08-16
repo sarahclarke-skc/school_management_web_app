@@ -32,6 +32,10 @@ def edit_student_course(id):
 #Update
 
 #Delete
+@student_courses_blueprint.route("/student_courses/<id>/delete", methods=['POST'])
+def delete_student_course(id):
+    student_course_repository.delete(id)
+    return redirect("/student_courses")
 
 #Show
 
