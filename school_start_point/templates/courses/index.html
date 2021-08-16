@@ -2,7 +2,7 @@
 {% block main %}
 <h1>All Courses</h1>
 
-<table>
+<table class = table>
     <tr>
         {% for course in courses %}
         <td><a href="/courses/{{ course.id }}"> {{course.name}} </a></td>

@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.student import Student
 import repositories.student_repository as student_repository
+import repositories.student_course_repository as student_course_repository
 
 students_blueprint = Blueprint("students", __name__)
 
@@ -49,6 +50,11 @@ def delete_student(id):
     return redirect("/students")
 
 
-#Show
+#Show - not sure if works
+@students_blueprint.route("/students/<id>")
+def show_student(id):
+    student = student_repository.select(id)
+    courses = student_course_repository.select(id)
+    return render_template("students/show.html", student = student, courses = courses)
 
 #Add course to student (/students/<student_id>/add_course)
