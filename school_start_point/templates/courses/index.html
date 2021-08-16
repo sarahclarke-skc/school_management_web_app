@@ -2,6 +2,16 @@
 {% block main %}
 <h1>All Courses</h1>
 
+<table>
+    <tr>
+        {% for course in courses %}
+        <td><a href="/courses/{{ course.id }}"> {{course.name}} </a></td>
+        <td><a href="/courses/{{course.id}}">{{course.level}}</a></td>
+        <td>{{course.days}}</td>
+        {% endfor %}
+    </tr>
+</table>
+
 <div id = index-buttons-small>
     <button><a href="/students/new">Add New Student</a></button>
     <button><a href="/student_courses">Enrolment</a></button>
