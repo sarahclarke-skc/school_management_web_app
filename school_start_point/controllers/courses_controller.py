@@ -3,6 +3,7 @@ from flask import Blueprint
 from models.course import Course
 import repositories.course_repository as course_repository
 
+
 courses_blueprint = Blueprint("courses", __name__)
 
 #Index
@@ -17,7 +18,7 @@ def new_course():
     return render_template("courses/new.html")
 
 #Create
-@courses_blueprint.route("/courses", methods = ["POST"])
+@courses_blueprint.route("/courses", methods=["POST"])
 def create_course():
     name = request.form["name"]
     level = request.form["level"]
@@ -57,3 +58,7 @@ def delete_course(id):
 
 
 #Show
+@courses_blueprint.route("/courses/<id>/show")
+def show_students(id):
+    students = course_repository.get_students_on_course(id)
+    return render_template("courses/show.html", students = students)
