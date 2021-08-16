@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/students/{{ student.id }}" method="POST">
+    <div class="form">
+        <label for="name">Enter course name</label>
+        <input type="text" id="name" value="{{course.name}}">
+        <select name="levels" id="levels">
+            <option value="Elementary">Elementary</option>
+            <option value="Pre-Intermediate">Pre-Intermediate</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Upper-Intermediate">Upper-Intermediate</option>
+            <option value="Advanced">Advanced</option>
+        </select>
+        <label for="days">Course Days</label>
+        <input type="text" id="days" value="{{course.days}}">
+        <label for="duration">Duration</label>
+        <input type="text" id="duration" value="{{course.duration}}">
+        <label for="length_of_course">Length of Course</label> 
+        <input type="text" id="length_of_course" value="{{course.length_of_course}}">
+        
+    </div>
