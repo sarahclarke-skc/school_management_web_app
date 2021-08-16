@@ -34,7 +34,7 @@ def update_student(id):
     #insert code
     first_name = request.form["first_name"]
     last_name = request.form["last_name"]
-    email = request.form["last_name"]
+    email = request.form["email"]
     telephone = request.form["telephone"]
     #not sure about level or enrolled b/c want a dropdown
     level = request.form["level"]

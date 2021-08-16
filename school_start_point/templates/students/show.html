@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block main %}
+{% block content %}
 <h1>Student Information</h1>
 <h2>{{ student.get_full_name(student) }}</h2>
 
@@ -8,7 +8,7 @@
     <table style="width:100%">
         <tr>
             <th>Name</th>
-            <td>{{student.name}}</td>
+            <td>{{student.get_full_name(student)}}</td>
         </tr>
         <tr>
             <th>Telephone</th>
@@ -24,14 +24,15 @@
         </tr>
         <tr>
             <th>Courses</th>
-            <td>{{student_courses.courses}}</td>
+            <!-- <td>to do</td> -->
         </tr>
         <tr>
+            <!-- to do -->
             <th>Status</th>
             <td>{% if student.status == true %}
-                    student.status = Enrolled
+                    Enrolled
                     else:
-                    student.status = Former 
+                    Former 
                 </td>
                 {% endif %}
         </tr>
@@ -42,7 +43,7 @@
 
 <div id = index-buttons-small>
     <button><a href="/students/new">Add New Student</a></button>
-    <button><a href="/student_courses">Enrolment</a></button>
+    <button><a href="/students/{{student.id}}/edit">Update Student</a></button>
     <button><a href="#"></a>Add Student to Course</button>
 </div>
 

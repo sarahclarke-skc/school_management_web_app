@@ -5,9 +5,9 @@ from controllers.students_controller import students_blueprint
 
 app = Flask(__name__)
 
+app.register_blueprint(student_courses_blueprint)
 app.register_blueprint(courses_blueprint)
 app.register_blueprint(students_blueprint)
-app.register_blueprint(student_courses_blueprint)
 
 @app.route('/')
 def home():
