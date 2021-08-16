@@ -22,23 +22,32 @@ def select_all():
     sql = "SELECT * FROM student_courses"
     results = run_sql(sql)
     for result in results:
-        student = student_repository.select(result["student_id"])
-        course = course_repository.select(result["course_id"])
-        student_course = Student_Course(student, course, result["grade"], result["id"])
+        student_course = Student_Course(result['student'], result['course'], result['grade'], result['id'])
         student_courses.append(student_course)
     return student_courses
 
-#select according to id
-def select(id):
-    sql = "SELECT * FROM student_courses WHERE id = %s"
-    values = [id]
-    result = run_sql(sql, values)[0]
+# def select_all():
+#     student_courses = []
+#     sql = "SELECT * FROM student_courses"
+#     results = run_sql(sql)
+#     for result in results:
+#         student = student_repository.select(result["student_id"])
+#         course = course_repository.select(result["course_id"])
+#         student_course = Student_Course(student, course, result["grade"], result["id"])
+#         student_courses.append(student_course)
+#     return student_courses
 
-    if result is not None:
-        student = student_repository.select(result["student_id"])
-        course = course_repository.select(result["course_id"])
-        student_course = Student_Course(student, course, result["id"])
-    return student_course
+#select according to id
+# def select(id):
+#     sql = "SELECT * FROM student_courses WHERE id = %s"
+#     values = [id]
+#     result = run_sql(sql, values)[0]
+
+#     if result is not None:
+#         student = student_repository.select(result["student_id"])
+#         course = course_repository.select(result["course_id"])
+#         student_course = Student_Course(student, course, result["id"])
+#     return student_course
 
 #delete all
 def delete_all():
