@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h2>Edit Course Details:</h2>
+
 <form action="/students/{{ student.id }}" method="POST">
     <div class="form">
         <label for="name">Enter course name</label>
@@ -18,5 +20,9 @@
         <input type="text" id="duration" value="{{course.duration}}">
         <label for="length_of_course">Length of Course</label> 
         <input type="text" id="length_of_course" value="{{course.length_of_course}}">
-        
+        <br>
+        <input type="submit">
     </div>
+</form>
+
+{% endblock %}
