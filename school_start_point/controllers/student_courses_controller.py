@@ -11,13 +11,23 @@ student_courses_blueprint = Blueprint("student_courses", __name__)
 @student_courses_blueprint.route("/student_course")
 def student_course():
     student_courses = student_course_repository.select_all()
-    return render_template("student_courses/index.html")
+    return render_template("student_courses/index.html", student_courses = student_courses )
 
 #New
+@student_courses_blueprint.route("/student_courses/new")
+def new_student_course():
+    return render_template("students/new.html")
 
-#Create
+#Create TO DO
+@student_courses_blueprint.route("/student_courses", methods=['POST'])
+def create_student_course():
+    pass
 
 #Edit
+@student_courses_blueprint.route("student_courses/<id>/edit")
+def edit_student_course(id):
+    student_course = student_course_repository.select(id)
+    return render_template("student_courses/edit.html", student_course = student_course)
 
 #Update
 
