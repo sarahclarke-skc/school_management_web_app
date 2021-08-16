@@ -20,7 +20,15 @@ def new_student():
 #Create -- TO DO
 @students_blueprint.route("/students", methods = ["POST"])
 def create_student():
-    pass
+    first_name = request.form["first_name"]
+    last_name = request.form["last_name"]
+    email = request.form["email"]
+    telephone = request.form["telephone"]
+    level = request.form["level"]
+    enrolled = request.form["enrolled"]
+    new_student = Student(first_name, last_name, email, telephone, level, enrolled)
+    student_repository.save(new_student)
+    return redirect("/students")
 
 #Edit
 @students_blueprint.route("/students/<id>/edit")
@@ -36,7 +44,6 @@ def update_student(id):
     last_name = request.form["last_name"]
     email = request.form["email"]
     telephone = request.form["telephone"]
-    #not sure about level or enrolled b/c want a dropdown
     level = request.form["level"]
     enrolled = request.form["enrolled"]
     student = Student(first_name, last_name, email, telephone, level, enrolled, id)
@@ -54,7 +61,7 @@ def delete_student(id):
 @students_blueprint.route("/students/<id>")
 def show_student(id):
     student = student_repository.select(id)
-    courses = student_course_repository.select(id)
-    return render_template("students/show.html", student = student, courses = courses)
-
+    # courses = student_course_repository.select(id)
+    return render_template("students/show.html", student = student)
+#courses=courses
 #Add course to student (/students/<student_id>/add_course)

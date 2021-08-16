@@ -3,25 +3,25 @@
 <h2>Add New Student</h2>
 <form action="/students" method="POST">
     <div>
-        <label for="first-name">First Name</label>
-        <input type="text" id="first-name" name="first-name">
-        <label for="surname">Surname</label>
-        <input type="text" id="surname" name="surname">
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name" name="first_name">
+        <label for="last_name">Surname</label>
+        <input type="text" id="last_name" name="last_name">
         <label for="email">Email</label>
         <input type="text" id="email" name="email">
         <label for="telephone">Telephone</label>
         <input type="text" id="telephone" name="telephone">
-        <label id="student-level" for="level">Level</label>
-        <select name="move" id="move">
-        <option value="elementary">Elementary</option>
-        <option value="pre-intermediate">Pre Intermediate</option>
-        <option value="intermediate">Intermediate</option>
-        <option value="upper-intermediate">Upper Intermediate</option>
-        <option value="advanced">Advanced</option>
+        <label id="level" for="level">Level</label>
+        <select name="level" id="level">
+        <option value="Elementary">Elementary</option>
+        <option value="Pre-intermediate">Pre Intermediate</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Upper-intermediate">Upper Intermediate</option>
+        <option value="Advanced">Advanced</option>
         </select>
         <input type="radio" id="enrolled" name="enrolled" value = True>
         <label for="enrolled">Enrolled</label>
-        <input type="radio" id="enrolled" name="former" value = False> 
+        <input type="radio" id="enrolled" name="enrolled" value = False> 
         <label for = "enrolled">Former Student</label>
         <input type="submit">
     </div>
