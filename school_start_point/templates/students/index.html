@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block main %}
+<h1>All Students</h1>
+
+<table>
+    <tr>
+        {% for student in students %}
+        <td><a href="/students/{{ student.id }}"> {{student.get_full_name(student)}} </a></td>
+        {% endfor %}
+    </tr>
+</table>
+
+<div id = index-buttons-small>
+    <button><a href="/students/new">Add New Student</a></button>
+    <button><a href="/student_courses">Enrolment</a></button>
+    <button><a href="#"></a>Add Student to Course</button>
+</div>
+
+{% endblock %}
