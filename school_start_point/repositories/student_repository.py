@@ -1,3 +1,4 @@
+from models.student_course import Student_Course
 from pdb import run
 from db.run_sql import run_sql
 from models.student import Student
@@ -16,7 +17,7 @@ def save(student):
 def select_all():
     students =[]
 
-    sql = "SELECT * FROM students"
+    sql = "SELECT * FROM students ORDER BY last_name ASC"
     results = run_sql(sql)
 
     for result in results:
@@ -27,10 +28,14 @@ def select_all():
 
 #select one according to id
 def select(id):
+    student = None
+
     sql = "SELECT * FROM students WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
-    student = Student(result["first_name"], result["last_name"], result["email"], result["telephone"], result["level"], result["enrolled"], result["id"])
+    
+    if result is not None:
+        student = Student(result["first_name"], result["last_name"], result["email"], result["telephone"], result["level"], result["enrolled"], result["id"])
     return student
 
 #delete all
@@ -51,3 +56,15 @@ def update(student):
     run_sql(sql, values)
 
 #find the courses a student is enrolled on
+def courses(student):
+    courses = []
+    
+    sql = "SELECT courses.* FROM courses INNER JOIN student_courses ON student_courses.course_id = course.id WHERE student_courses.student_id = %s"
+    values = [student.id]
+    results = run_sql(sql, values)
+
+    for result in results:
+        course = Course(result['name'], result['level'], result['days'], result['start_time'], result['duration'], result['length_of_course'], result['id'])
+        courses.append(course)
+
+    return courses

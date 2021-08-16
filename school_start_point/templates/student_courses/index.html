@@ -1,10 +1,16 @@
-{% entends "base.html" %}
+{% extends "base.html" %}
 {% block content %}
 
 <h2>Enrolment</h2>
 
 {% for student_course in student_courses %}
-    {{student_course.student}} {{student_course.course}} <a href="/student_courses{{student_course.id}}/edit">Edit enrolment</a>
+   <p> 
+       {{student_course.student.first_name}}  {{student_course.student.last_name}} 
+   </p> 
+   <p>{{student_course.course.name}} </p>
+   
+   <!-- <a href="/student_courses{{student_course.id}}/edit">Edit enrolment</a> -->
+   
 {% endfor %}
 
 {% endblock %}
