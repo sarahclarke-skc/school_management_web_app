@@ -1,0 +1,10 @@
+{% entends "base.html" %}
+{% block content %}
+
+<h2>Enrolment</h2>
+
+{% for student_course in student_courses %}
+    {{student_course.student}} {{student_course.course}} <a href="/student_courses{{student_course.id}}/edit">Edit enrolment</a>
+{% endfor %}
+
+{% endblock %}
