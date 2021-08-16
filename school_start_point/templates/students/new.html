@@ -1,4 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>o;ajgpajd</h2>
+<h2>Add New Student</h2>
+<form action="/students" method="POST">
+    <div>
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name">
+        <label for="surname">Surname</label>
+        <input type="text" id="surname" name="surname">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+        <label for="telephone">Telephone</label>
+        <input type="text" id="telephone" name="telephone">
+        <label id="student-level" for="level">Level</label>
+        <select name="move" id="move">
+        <option value="elementary">Elementary</option>
+        <option value="pre-intermediate">Pre Intermediate</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="upper-intermediate">Upper Intermediate</option>
+        <option value="advanced">Advanced</option>
+        </select>
+        <input type="radio" id="enrolled" name="enrolled" value = True>
+        <label for="enrolled">Enrolled</label>
+        <input type="radio" id="enrolled" name="former" value = False> 
+        <label for = "enrolled">Former Student</label>
+        <input type="submit">
+    </div>
+</form>
+
 {% endblock %}
