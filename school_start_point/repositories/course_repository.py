@@ -8,8 +8,8 @@ def save(course):
     sql = "INSERT INTO courses(name, level, days, start_time, duration, length_of_course) VALUES (%s, %s, %s, %s, %s, %s) RETURNING id"
     values = [course.name, course.level, course.days, course.start_time, course.duration, course.length_of_course]
     results = run_sql(sql, values)
-    id = results[0]['id']
-    course.id = id
+    course.id = results[0]['id']
+    return course
 
 #select all - might be nice to put them in alphabetical order
 
@@ -52,4 +52,16 @@ def update(course):
     run_sql(sql, values)
 
 #find the students enrolled on the course
+def get_students_on_course(id):
+    
+    students = []
+
+    sql = "SELECT students.* FROM students INNER JOIN student_courses ON student_courses.student_id = student.id WHERE student_courses.course_id =%s"
+    values = [id]
+    results = run_sql(sql, values)
+
+    for result in results:
+        student = Student(result['first_name'], result['last_name'], result['email'], result['telephone'], result['level'], result['enrolled'], result['id'])
+        students.append(student)
+    return students
 
