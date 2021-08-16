@@ -10,7 +10,6 @@ def save(course):
     results = run_sql(sql, values)
     id = results[0]['id']
     course.id = id
-    return course
 
 #select all - might be nice to put them in alphabetical order
 

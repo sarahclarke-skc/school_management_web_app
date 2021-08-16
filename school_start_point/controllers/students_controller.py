@@ -17,7 +17,7 @@ def students():
 def new_student():
     return render_template("students/new.html")
 
-#Create -- TO DO
+#Create 
 @students_blueprint.route("/students", methods = ["POST"])
 def create_student():
     first_name = request.form["first_name"]

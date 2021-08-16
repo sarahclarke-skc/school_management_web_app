@@ -19,7 +19,15 @@ def new_course():
 #Create
 @courses_blueprint.route("/courses", methods = ["POST"])
 def create_course():
-    pass
+    name = request.form["name"]
+    level = request.form["level"]
+    days = request.form["days"]
+    start_time = request.form["start_time"]
+    duration = request.form["start_time"]
+    length_of_course = request.form["length_of_course"]
+    new_course = Course(name, level, days, start_time, duration, length_of_course)
+    course_repository.save(new_course)
+    return redirect("/courses")
 
 #Edit
 @courses_blueprint.route("/courses/<id>/edit")
@@ -32,7 +40,6 @@ def edit_course(id):
 def update_course(id):
     #insert code
     name = request.form["name"]
-    #see how this works for dropdowns
     level = request.form["level"]
     days = request.form["days"]
     start_time = request.form["start_time"]
