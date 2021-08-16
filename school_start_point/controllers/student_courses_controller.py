@@ -8,7 +8,7 @@ import repositories.student_repository as student_repository
 student_courses_blueprint = Blueprint("student_courses", __name__)
 
 #Index --> should I use the route as student_course OR should I use 'enrolment'?
-@student_courses_blueprint.route("/student_course")
+@student_courses_blueprint.route("/student_courses")
 def student_course():
     student_courses = student_course_repository.select_all()
     return render_template("student_courses/index.html", student_courses = student_courses )
@@ -24,7 +24,7 @@ def create_student_course():
     pass
 
 #Edit
-@student_courses_blueprint.route("student_courses/<id>/edit")
+@student_courses_blueprint.route("/student_courses/<id>/edit")
 def edit_student_course(id):
     student_course = student_course_repository.select(id)
     return render_template("student_courses/edit.html", student_course = student_course)
