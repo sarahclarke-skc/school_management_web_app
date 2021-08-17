@@ -61,6 +61,6 @@ def delete_student(id):
 @students_blueprint.route("/students/<id>")
 def show_student(id):
     student = student_repository.select(id)
-    courses = student_course_repository.select_all()
-    return render_template("students/show.html", student=student, courses=courses)
+    student_courses = student_course_repository.select_all()
+    return render_template("students/show.html", student=student, student_courses = student_courses, id=id)
 

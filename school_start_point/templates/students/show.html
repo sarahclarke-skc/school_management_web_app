@@ -24,8 +24,9 @@
     </tr>
     <tr>
     <td>Courses</td>
-    <td>{% for course in courses %}
-    <ul value="{{course.id}}">{{course.course.name}}</ul>
+    <td>{% for student_course in student_courses %}
+        {% if student.id == student_course.student.id %}
+    <ul value="{{student_course.id}}">{{student_course.course.name}}</ul> {% endif %}
     {% endfor %}</td>
     <td>
     </td>
