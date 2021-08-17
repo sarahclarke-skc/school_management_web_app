@@ -24,7 +24,11 @@
     </tr>
     <tr>
     <td>Courses</td>
-    <td>jblkhk</td>
+    <td>{% for course in courses %}
+    <ul value="{{course.id}}">{{course.course.name}}</ul>
+    {% endfor %}</td>
+    <td>
+    </td>
     </tr>
     <tr>
     <td>Student Status</td>

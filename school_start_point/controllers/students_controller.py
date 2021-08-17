@@ -57,11 +57,10 @@ def delete_student(id):
     return redirect("/students")
 
 
-#Show - not sure if works
+#Show 
 @students_blueprint.route("/students/<id>")
 def show_student(id):
     student = student_repository.select(id)
-    # courses = student_course_repository.select(id)
-    return render_template("students/show.html", student = student)
-#courses=courses
-#Add course to student (/students/<student_id>/add_course)
+    courses = student_course_repository.select_all()
+    return render_template("students/show.html", student=student, courses=courses)
+
