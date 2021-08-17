@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>All Students</h1>
+<h2>All Students</h2>
 
 <table class = table>
     <tr>
         {% for student in students %}
-        <td><a href="/students/{{ student.id }}"> {{student.get_full_name(student)}} </a></td>
+        <p><a href="/students/{{ student.id }}"> {{student.get_full_name(student)}} </a></p>
         {% endfor %}
     </tr>
 </table>

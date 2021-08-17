@@ -24,8 +24,8 @@ def new_student_course():
 @student_courses_blueprint.route("/student_courses", methods=['POST'])
 def create_student_course():
     #get info from the form
-    student_id = request.form['student']
-    course_id = request.form['course']
+    student_id = request.form["student"]
+    course_id = request.form["course"]
     #select student and course
     student = student_repository.select(student_id)
     course = course_repository.select(course_id)
