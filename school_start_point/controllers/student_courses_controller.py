@@ -11,7 +11,8 @@ student_courses_blueprint = Blueprint("student_courses", __name__)
 @student_courses_blueprint.route("/student_courses")
 def student_course():
     student_courses = student_course_repository.select_all()
-    return render_template("student_courses/index.html", student_courses = student_courses )
+    students = student_course_repository.select_all()
+    return render_template("student_courses/index.html", student_courses = student_courses)
 
 #New
 @student_courses_blueprint.route("/student_courses/new")

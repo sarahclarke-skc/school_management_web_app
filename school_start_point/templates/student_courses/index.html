@@ -4,10 +4,19 @@
 <h2>Enrolment</h2>
 
 {% for student_course in student_courses %}
-   <p> 
+   <ul>
        {{student_course.student.first_name}}  {{student_course.student.last_name}} 
-   </p> 
-   <p>{{student_course.course.name}} </p>
+    </ul>
+    <ul>
+   {{student_course.course.name}}
+    </ul>
+    <ul>
+        {% if student_course.grade != None %}
+            {{student_course.grade}}
+        {% else %}
+             Not yet graded
+        {% endif %}
+    </ul>
 
 <div class="buttons">
 

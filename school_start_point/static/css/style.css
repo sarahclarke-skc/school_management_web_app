@@ -98,14 +98,14 @@ li {
 
 /* footer styling */
 
-.footer {
+/* .footer {
     background-color: white;
     bottom: 0;
     flex-direction: row;
     justify-content: space-around;
-    position: fixed;
+    position: absolute;
     width: 100%;
-}
+} */
 
 .links {
     display: flex;
