@@ -8,8 +8,19 @@
        {{student_course.student.first_name}}  {{student_course.student.last_name}} 
    </p> 
    <p>{{student_course.course.name}} </p>
-   <hr>
-   
+
+<div class="buttons">
+
+<form class="delete" action="/student_courses/{{student_course.id}}/delete" method="POST">
+    <button class="delete">
+        <span class="mdi mdi-delete mdi-24px"></span>
+        <span class="mdi mdi-delete-empty mdi-24px"></span>
+        <span>Delete</span>
+    </button>
+    </form>
+</div>   
+
+<hr>
    <!-- <a href="/student_courses{{student_course.id}}/edit">Edit enrolment</a> -->
    
 {% endfor %}
