@@ -1,46 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
+
 <h1>Student Information</h1>
 <h2>{{ student.get_full_name(student) }}</h2>
 
-<table class = table>
-  
-    <table style="width:100%">
-        <tr>
-            <th>Name</th>
-            <td>{{student.get_full_name(student)}}</td>
-        </tr>
-        <tr>
-            <th>Telephone</th>
-            <td>{{student.telephone}}</td>
-        </tr>
-        <tr>
-            <th>Email</th>
-            <td>{{student.email}}</td>
-        </tr>
-        <tr>
-            <th>Level</th>
-            <td>{{student.level}}</td>
-        </tr>
-        <tr>
-            <th>Courses</th>
-            <!-- <td>to do</td> -->
-        </tr>
-        <tr>
-            <!-- to do -->
-            <th>Status</th>
-            <td>{% if student.status == true %}
-                    Enrolled
-                    else:
-                    Former 
-                </td>
-                {% endif %}
-        </tr>
-    </table>
-    
-   
-</table>
 
+{{student.email}}
+
+<br>
 <div id = index-buttons-small>
     <button><a href="/students/new">Add New Student</a></button>
     <button><a href="/students/{{student.id}}/edit">Update Student</a></button>

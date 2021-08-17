@@ -6,7 +6,7 @@
     <tr>
         {% for course in courses %}
         <td><a href="/courses/{{ course.id }}"> {{course.name}} </a></td>
-        <td><a href="/courses/{{course.id}}">{{course.level}}</a></td>
+        <td>{{course.level}}</a></td>
         <td>{{course.days}}</td>
         {% endfor %}
     </tr>

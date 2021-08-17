@@ -7,3 +7,8 @@ class Course:
         self.duration = duration
         self.length_of_course = length_of_course
         self.id = id
+
+#add capacity parameter
+#add number of students booked onto course
+# def check_capacity(self):
+#     return booked =< capacity

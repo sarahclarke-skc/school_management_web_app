@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sterling School Management</title>
-    <link rel="shortcut icon" type="logo/png" href="static/images/s_favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='images/s_favicon.png') }}"/>
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <header>
-        <img id=logo src="static/images/s_favicon.png" alt="Sterling Logo">
-                <h1><a href="/">Sterling School Management</a></h1>
-                <nav>
+    <header class="header">
+        <img id="logo" src="static/images/s_favicon.png" alt="Sterling Logo">
+                <h1><a href="/">Sterling Management System</a></h1>
+                <nav id="nav-bar">
                     <ul class="main-nav">
                         <li><a href="/students">Students</a></li>
                         <li><a href="/courses">Courses</a></li>
@@ -20,9 +21,13 @@
                 </nav>
                
     </header>
+
+    <main>
    
    {% block content %}
    {% endblock %}
+
+    </main>
 
    <footer class="footer">
     
@@ -42,7 +47,7 @@
         </div>
     </div> -->
 
-    <p>© 2021</p>
+    <p id="copyright">© 2021</p>
 
     </footer>
 </body>

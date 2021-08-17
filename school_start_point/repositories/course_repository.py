@@ -28,10 +28,13 @@ def select_all():
 #select one according to id
 
 def select(id):
+    course = None
     sql = "SELECT * FROM courses WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
-    course = Course(result['name'], result['level'], result['days'], result['start_time'], result['duration'], result['length_of_course'], result['id'])
+    
+    if result is not None:
+        course = Course(result['name'], result['level'], result['days'], result['start_time'], result['duration'], result['length_of_course'], result['id'])
     return course
 
 #delete all
