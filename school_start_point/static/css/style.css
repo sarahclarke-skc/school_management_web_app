@@ -100,6 +100,11 @@ li {
 
 .footer {
     background-color: white;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
 }
 
 .links {
