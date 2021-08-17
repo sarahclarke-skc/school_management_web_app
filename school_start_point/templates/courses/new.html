@@ -1,28 +1,42 @@
 {% extends "base.html" %}
 {% block content %}
 <h2>Add New Course</h2>
-<form action="/courses" method="POST">
-    <div>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name">
-        <label id="level" for="level">Level</label>
-        <select name="level" id="level">
-        <option value="Elementary">Elementary</option>
-        <option value="Pre-intermediate">Pre Intermediate</option>
-        <option value="Intermediate">Intermediate</option>
-        <option value="Upper-Intermediate">Upper Intermediate</option>
-        <option value="Advanced">Advanced</option>
-        </select>
-        <label for="days">Days</label>
-        <input type="text" id="days" name="days">
-        <label for="start_time">Start time</label>
-        <input type="text" id="start_time" name="start_time">
-        <label for="duration">Duration</label>
-        <input type="text" id="duration" name="duration">
-        <label for="length_of_course">Length of Course</label>
-        <input type="text" id="length_of_course" name="length_of_course">
-        <input type="submit">
-    </div>
+<form action="/courses" method="POST" class="add-new-course-form">
+    <ul>
+        <li>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+        </li>
+        <li>
+            <label id="level" for="level">Level</label>
+            <select name="level" id="level">
+            <option value="Elementary">Elementary</option>
+            <option value="Pre-intermediate">Pre Intermediate</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Upper-Intermediate">Upper Intermediate</option>
+             <option value="Advanced">Advanced</option>
+            </select>
+        </li>
+        <li>
+            <label for="days">Days</label>
+            <input type="text" id="days" name="days">
+        </li>
+        <li>
+            <label for="start_time">Start time</label>
+            <input type="text" id="start_time" name="start_time">
+        </li>
+        <li>
+            <label for="duration">Duration</label>
+            <input type="text" id="duration" name="duration">
+        </li>
+        <li>
+            <label for="length_of_course">Length of Course</label>
+            <input type="text" id="length_of_course" name="length_of_course">
+        </li>
+        <li>
+            <input type="submit">
+        </li>
+    </ul>
 </form>
 
 {% endblock %}
