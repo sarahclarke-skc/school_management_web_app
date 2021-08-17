@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sterling School Management</title>
     <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='images/s_favicon.png') }}"/>
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/forms.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
 </head>
 <body>
+    <div class="logo"></div>
+    
     <header class="header">
-        <a href="/"><img id="logo" src="static/images/s_favicon.png" alt="Sterling Logo"></a>
                 <h1><a href="/">Sterling Management System</a></h1>
                 <nav id="nav-bar">
                     <ul class="main-nav">

@@ -59,7 +59,7 @@ def update(student):
 def courses(student):
     courses = []
     
-    sql = "SELECT courses.* FROM courses INNER JOIN student_courses ON student_courses.course_id = course.id WHERE student_courses.student_id = %s"
+    sql = "SELECT courses.* FROM courses INNER JOIN student_courses ON student_courses.course_id = courses.id WHERE student_courses.student_id = %s"
     values = [student.id]
     results = run_sql(sql, values)
 
