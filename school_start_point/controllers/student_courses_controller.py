@@ -16,7 +16,9 @@ def student_course():
 #New
 @student_courses_blueprint.route("/student_courses/new")
 def new_student_course():
-    return render_template("student_courses/new.html")
+    students = student_repository.select_all()
+    courses = course_repository.select_all()
+    return render_template("student_courses/new.html", students=students, courses=courses)
 
 #Create TO DO
 @student_courses_blueprint.route("/student_courses", methods=['POST'])
