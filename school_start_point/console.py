@@ -26,7 +26,7 @@ student_repository.save(student)
 student_2 = Student("Liza", "Bogdanova", "liza_b@gmail.com", "+7911222333", "Intermediate", True)
 student_repository.save(student_2)
 
-course = Course("English File", "Upper Intermediate", "Tuesday Thursday", "19:30", 90, "36 weeks")
+course = Course("IELTS", "Upper Intermediate", "Tuesday Thursday", "19:30", 90, "36 weeks")
 course_repository.save(course)
 
 course_2 = Course("English File", "Intermediate", "Wednesday Friday", "19:15", 120, "30 weeks")

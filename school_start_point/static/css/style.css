@@ -23,6 +23,7 @@ body {
     font-size: xx-large;
     margin: 0 auto;
     display: block;
+    border-radius: 10px;
 }
 
 .button-group button:not(:last-child) {

@@ -2,12 +2,24 @@
 {% block content %}
 <h1>All Courses</h1>
 
-<table class = table>
+<table class="all-courses-table">
     <tr>
-        {% for course in courses %}
-        <td><a href="/courses/{{ course.id }}"> {{course.name}} </a></td>
-        <td>{{course.level}}</a></td>
-        <td>{{course.days}}</td>
+        <table>
+            <tbody>
+            <tr>
+            <td>Course name</td>
+            <td>Level</td>
+            <td>Days</td>
+            </tr>
+            {% for course in courses %}
+            <tr>
+            <td>{{course.name}}</td>
+            <td>{{course.level}}</td>
+            <td>{{course.days}}</td>
+            </tr>
+            </tbody>
+            </table>
+        <br>
         {% endfor %}
     </tr>
 </table>
@@ -15,7 +27,7 @@
 <div id = index-buttons-small>
     <button><a href="/courses/new">Add New Course</a></button>
     <button><a href="/student_courses">Enrolment</a></button>
-    <button><a href="#"></a>Add Student to Course</button>
+    <button><a href="/student_courses/new">Add Student to Course</button>
 </div>
 
 {% endblock %}

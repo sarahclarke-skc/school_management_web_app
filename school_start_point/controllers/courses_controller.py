@@ -24,8 +24,8 @@ def create_course():
     level = request.form["level"]
     days = request.form["days"]
     start_time = request.form["start_time"]
-    duration = request.form["start_time"]
-    length_of_course = request.form["length_of_course"]
+    duration = request.form["duration"]
+    length_of_course =request.form["length_of_course"]
     new_course = Course(name, level, days, start_time, duration, length_of_course)
     course_repository.save(new_course)
     return redirect("/courses")

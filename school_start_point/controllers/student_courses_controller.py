@@ -20,10 +20,21 @@ def new_student_course():
     courses = course_repository.select_all()
     return render_template("student_courses/new.html", students=students, courses=courses)
 
-#Create TO DO
+#Create TO DO??? - redirect doesn't work
 @student_courses_blueprint.route("/student_courses", methods=['POST'])
 def create_student_course():
-    pass
+    #get info from the form
+    student_id = request.form['student']
+    course_id = request.form['course']
+    #select student and course
+    student = student_repository.select(student_id)
+    course = course_repository.select(course_id)
+    #Create new instance of student_course
+    student_course = Student_Course(student, course, None)
+    #save to db?
+    student_course_repository.save(student_course)
+    course_repository.update(course)
+    return redirect('/student_courses')
 
 #Edit
 @student_courses_blueprint.route("/student_courses/<id>/edit")
@@ -40,5 +51,3 @@ def delete_student_course(id):
     return redirect("/student_courses")
 
 #Show
-
-#Add student to course?

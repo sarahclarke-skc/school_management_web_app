@@ -11,7 +11,7 @@ def save(course):
     course.id = results[0]['id']
     return course
 
-#select all - might be nice to put them in alphabetical order
+#select all
 
 def select_all():
     courses =[]

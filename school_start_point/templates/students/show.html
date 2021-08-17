@@ -4,14 +4,41 @@
 <h1>Student Information</h1>
 <h2>{{ student.get_full_name(student) }}</h2>
 
-
-{{student.email}}
-
+<table id="individual-student-display">
+    <tbody>
+    <tr>
+    <td>Name</td>
+    <td>{{student.get_full_name(student)}}</td>
+    </tr>
+    <tr>
+    <td>Telephone</td>
+    <td>{{student.telephone}}</td>
+    </tr>
+    <tr>
+    <td>Email</td>
+    <td>{{student.email}}</td>
+    </tr>
+    <tr>
+    <td>Level</td>
+    <td>{{student.level}}</td>
+    </tr>
+    <tr>
+    <td>Courses</td>
+    <td>jblkhk</td>
+    </tr>
+    <tr>
+    <td>Student Status</td>
+    <td>{{student.enrolled}}
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    
 <br>
 <div id = index-buttons-small>
     <button><a href="/students/new">Add New Student</a></button>
     <button><a href="/students/{{student.id}}/edit">Update Student</a></button>
-    <button><a href="#"></a>Add Student to Course</button>
+    <button><a href="/student_courses/new">Add Student to Course</a></button>
 </div>
 
 {% endblock %}
