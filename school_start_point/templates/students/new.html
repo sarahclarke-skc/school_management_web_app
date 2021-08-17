@@ -1,16 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
 <h2>Add New Student</h2>
-<form action="/students" method="POST">
-    <div>
-        <label for="first_name">First Name</label>
-        <input type="text" id="first_name" name="first_name">
+<form action="/students" method="POST" class="add-new-student-form">
+    <ul>
+        <li>
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name">
+        </li>
+    
+    <li>
         <label for="last_name">Surname</label>
         <input type="text" id="last_name" name="last_name">
+        <span></span>
+    </li>
+    <li>
         <label for="email">Email</label>
         <input type="text" id="email" name="email">
+    </li>
+    <li>
         <label for="telephone">Telephone</label>
         <input type="text" id="telephone" name="telephone">
+    </li>
+    <li>
         <label id="level" for="level">Level</label>
         <select name="level" id="level">
         <option value="Elementary">Elementary</option>
@@ -19,10 +30,15 @@
         <option value="Upper-Intermediate">Upper Intermediate</option>
         <option value="Advanced">Advanced</option>
         </select>
-        <input type="checkbox" name="enrolled" value="True" checked>
+    </li>
+    <li>
         <label for="enrolled">Current student?</label>
+        <input type="checkbox" name="enrolled" value="True" checked>
+    </li>
+    <li>
         <input type="submit">
-    </div>
+    </li>
+    </ul>
 </form>
 
 {% endblock %}

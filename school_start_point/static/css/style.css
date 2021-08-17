@@ -115,3 +115,17 @@ li {
 #copyright {
     text-align: center;
 }
+
+/* forms css - how do you add the link to html?*/
+.add-new-student-form {
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+.add-new-student-form {
+    display: block;
+    padding: 9px;
+    border: 1px solid black;
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
