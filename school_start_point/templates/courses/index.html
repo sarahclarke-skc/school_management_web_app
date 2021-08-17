@@ -19,6 +19,17 @@
             </tr>
             </tbody>
             </table>
+
+            <div class="buttons">
+
+                <form class="delete" action="/courses/{{course.id}}/delete" method="POST">
+                    <button class="delete">
+                        <span class="mdi mdi-delete mdi-24px"></span>
+                        <span class="mdi mdi-delete-empty mdi-24px"></span>
+                        <span>Delete</span>
+                      </button>
+                </form>
+              </div>
         <br>
         {% endfor %}
     </tr>

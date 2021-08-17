@@ -44,7 +44,7 @@ def delete_all():
 
 #delete one according to id
 def delete(id):
-    sql = "DELTE FROM courses WHERE id = %s"
+    sql = "DELETE FROM courses WHERE id = %s"
     values = [id]
     run_sql(sql, values)
 
