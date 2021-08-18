@@ -2,10 +2,10 @@
 {% block content %}
 <h2>All Courses</h2>
 
-<table class="all-courses-table">
+<table>
     <tr>
     {% for course in courses %}
-        <table>
+        <table class="all-courses-display">
             <tr></tr>
             <td>Course name</td>
             <td><a href="/courses/{{course.id}}">{{course.name}}</a></td>
@@ -15,38 +15,28 @@
             <tr></tr>
             <td>Days</td>
             <td>{{course.days}}</td>
-        </table>
-
-            <div class="buttons">
-
-                <form class="delete" action="/courses/{{course.id}}/delete" method="POST">
-                    <button class="delete">
-                        <span class="mdi mdi-delete mdi-24px"></span>
-                        <span class="mdi mdi-delete-empty mdi-24px"></span>
-                        <span>Delete</span>
-                      </button>
-                </form>
-            </div>
-        <br>
-
-        <div class="buttons">
-
-            <form class="edit" action="/courses/{{course.id}}/edit" method='GET'>
-                <button class="edit">
-                    <span class="mdi mdi-delete mdi-24px"></span>
-                    <span class="mdi mdi-delete-empty mdi-24px"></span>
+            <tr></tr>
+            <td><form class="delete" action="/courses/{{course.id}}/delete" method="POST">
+                <button class="delete">
+                    <span>Delete</span>
+                  </button>
+            </form></td>
+            <td><form action="/courses/{{course.id}}/edit" method='GET'>
+                <button>
                     <span>Edit</span>
                   </button>
-            </form>
-        </div>
+            </form></td>
+        <br>
+        </table>
+
     </tr>
 </table>
 {% endfor %}
 
-<div id = index-buttons-small>
+<div class="index-buttons-small">
     <button><a href="/courses/new">Add New Course</a></button>
     <button><a href="/student_courses">Enrolment</a></button>
-    <button><a href="/student_courses/new">Add Student to Course</button>
+    <button><a href="/student_courses/new">Add Student to Course</a></button>
 </div>
 
 {% endblock %}
