@@ -17,12 +17,12 @@
             <td>{{course.days}}</td>
             <tr></tr>
             <td><form class="delete" action="/courses/{{course.id}}/delete" method="POST">
-                <button class="delete">
+                <button class="action-button">
                     <span>Delete</span>
                   </button>
             </form></td>
             <td><form action="/courses/{{course.id}}/edit" method='GET'>
-                <button>
+                <button class="action-button">
                     <span>Edit</span>
                   </button>
             </form></td>

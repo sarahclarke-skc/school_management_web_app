@@ -50,7 +50,6 @@ h2 {
   .header h1 {
     position: relative;
     top: 18px;
-    left: 10px;
   }
 
 h1 {
@@ -91,6 +90,11 @@ h1 a {
     text-decoration: none;
 }
 
+ul.main-nav
+ {
+    padding-left: 0 !important
+}
+
 /* .header a:link, a:visited {
     background-color: #004A6E ;
     color: rgb(196, 194, 194);
@@ -102,26 +106,13 @@ h1 a {
 
 li {
     list-style: none;
-} */
-
-/* nav ul li a {
-    list-style: none;
-} */
-
-/* index */
-/* #index-buttons-big a {
-    display: grid;
-    
-} */
-
-/* footer styling */
+} 
 
 .footer {
     background-color: white;
     bottom: 0;
     flex-direction: row;
     justify-content: space-around;
-    position: absolute;
     width: 100%;
 } 
 
@@ -147,17 +138,26 @@ li {
 }
 
 .index-buttons-small a {
-    padding: 40px;
     font-size: 20px;
     color: #004A6E;
     text-decoration: none;
 }
 
+.action-button {
+    display: inline-block;
+    padding: 0.5em 3em;
+    border:0.16em solid #004A6E;
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-weight:400;
+    color: #004A6E;
+    text-align:center;
+    transition: all 0.15s;
+}
 
-/* .add-new-student-form {
-    display: block;
-    padding: 9px;
-    border: 1px solid black;
-    margin-bottom: 30px;
-    border-radius: 3px;
-} */
+.action-button:hover{
+    color:#004;
+    border-color:#004A6E
+}

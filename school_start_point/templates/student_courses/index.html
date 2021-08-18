@@ -4,6 +4,7 @@
 <h2>Enrolment</h2>
 
 {% for student_course in student_courses %}
+<div class="enrolment">
    <ul>
        {{student_course.student.first_name}}  {{student_course.student.last_name}} 
     </ul>
@@ -18,30 +19,23 @@
         {% endif %}
     </ul>
 
-<div class="buttons">
-
+<ul>
 <form class="delete" action="/student_courses/{{student_course.id}}/delete" method="POST">
-    <button class="delete">
-        <span class="mdi mdi-delete mdi-24px"></span>
-        <span class="mdi mdi-delete-empty mdi-24px"></span>
+    <button class="action-button">
         <span>Delete</span>
     </button>
     </form>
-</div>   
+</ul>  
 
-<br>
-
-<div class="buttons">
-
-    <form class="edit" action="/student_courses/{{student_course.id}}/edit" method="POST">
-        <button class="edit">
-            <span class="mdi mdi-delete mdi-24px"></span>
-            <span class="mdi mdi-delete-empty mdi-24px"></span>
-            <span>Change Grade</span>
+<ul>
+<form class="edit" action="/student_courses/{{student_course.id}}/edit" method="POST">
+    <button class="action-button">
+        <span>Change Grade</span>
         </button>
-        </form>
-    </div>   
+</form> 
+</ul>
 
+</div>
 <hr>
    
 {% endfor %}

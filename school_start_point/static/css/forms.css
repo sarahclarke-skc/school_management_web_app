@@ -38,12 +38,17 @@
     margin: 50px auto;
     display: block;
     padding: 9px;
-    border: 3px solid black;
+    border: 3px solid  #004A6E;
     margin-bottom: 30px;
     border-radius: 3px;
     background: rgb(138, 175, 233);
     text-align: center;
     font-size: x-large;
+    color: #004A6E;
+}
+
+.all-students-display a {
+    text-decoration: none;
 }
 
 .all-courses-display{
@@ -58,5 +63,21 @@
     text-align: center;
     font-size: x-large;
     color: #004A6E;
+}
 
+.enrolment {
+    max-width: 25%;
+    margin: 50px auto;
+    display: block;
+    border: 3px solid black;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    background: rgb(138, 175, 233);
+    font-size: medium;
+    color: #004A6E;
+    text-align: center;
+}
+
+.enrolment ul {
+    padding: 0
 }
