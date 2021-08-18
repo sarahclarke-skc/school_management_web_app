@@ -1,6 +1,9 @@
+import re
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.student_course import Student_Course
+from models.student import Student
+from models.course import Course
 import repositories.student_course_repository as student_course_repository
 import repositories.course_repository as course_repository
 import repositories.student_repository as student_repository
@@ -21,7 +24,7 @@ def new_student_course():
     courses = course_repository.select_all()
     return render_template("student_courses/new.html", students=students, courses=courses)
 
-#Create TO DO??? - redirect doesn't work
+#Create TO DO??? 
 @student_courses_blueprint.route("/student_courses", methods=['POST'])
 def create_student_course():
     #get info from the form
@@ -44,6 +47,13 @@ def edit_student_course(id):
     return render_template("student_courses/edit.html", student_course = student_course)
 
 #Update
+@student_courses_blueprint.route("/student_courses/<id>", methods=["POST"])
+def update_student_course(id):
+    student_course = student_course_repository.select(id)
+    grade = request.form['grade']
+    updated_details = Student_Course(student_course.student, student_course.course, grade, id)
+    student_course_repository.update(updated_details)
+    return redirect('/student_courses')
 
 #Delete
 @student_courses_blueprint.route("/student_courses/<id>/delete", methods=['POST'])

@@ -3,16 +3,15 @@
 
 <h2>Edit Student Grade Details:</h2>
 
-<form id="update-courses" action="/courses/{{ student_course.id }}" method="POST">
+<form id="update-courses" action="/student_courses/{{ student_course.id }}" method="POST">
     <div class="form">
-        <label for="name">Grade</label>
-        <input type="text" id="name" value="{{student_course.student.grade}}">
-        <select name="levels" id="levels">
+        <label for="grade">Grade</label>
+        <select name="grade" id="levels">
             <option value="A">A</option>
-            <option value="Pre-Intermediate">B</option>
-            <option value="Intermediate">C</option>
-            <option value="Upper-Intermediate">D</option>
-            <option value="Advanced">Fail</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">Fail</option>
         </select>
         <br>
         <input type="submit" class="action-button">

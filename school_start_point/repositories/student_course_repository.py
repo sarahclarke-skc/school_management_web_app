@@ -50,7 +50,7 @@ def select(id):
         student = student_repository.select(result["student_id"])
         course = course_repository.select(result["course_id"])
         grade = result['grade']
-        student_course = Student_Course(student, course, grade, id=id)
+        student_course = Student_Course(student, course, grade, id)
     return student_course
 
 #delete all
@@ -65,3 +65,7 @@ def delete(id):
     run_sql(sql, values)
 
 #update
+def update(student_course):
+    sql = "UPDATE student_courses SET (student_id, course_id, grade) = (%s, %s, %s) WHERE id = %s"
+    values = [student_course.student.id, student_course.course.id, student_course.grade, student_course.id]
+    run_sql(sql, values)
