@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
 </head>
 <body>
-    <div class="logo"></div>
+<div>
     
     <header class="header">
+                <a href="/"><img src="/static/images/s_favicon.png" alt="logo"></a>
                 <h1><a href="/">Sterling Management System</a></h1>
                 <nav id="nav-bar">
                     <ul class="main-nav">
@@ -23,7 +24,7 @@
                 </nav>
                
     </header>
-
+</div>
     <main>
    
    {% block content %}

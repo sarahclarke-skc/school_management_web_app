@@ -58,7 +58,7 @@ def delete_course(id):
 
 
 #Show
-@courses_blueprint.route("/courses/<id>/show")
-def show_students(id):
-    students = course_repository.get_students_on_course(id)
-    return render_template("courses/show.html", students = students)
+@courses_blueprint.route("/courses/<id>")
+def show_courses(id):
+    course = course_repository.select(id)
+    return render_template("courses/show.html", course=course)

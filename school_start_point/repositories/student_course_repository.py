@@ -49,7 +49,8 @@ def select(id):
     if result is not None:
         student = student_repository.select(result["student_id"])
         course = course_repository.select(result["course_id"])
-        student_course = Student_Course(student, course)
+        grade = result['grade']
+        student_course = Student_Course(student, course, grade, id=id)
     return student_course
 
 #delete all

@@ -38,7 +38,7 @@ def create_student_course():
     return redirect('/student_courses')
 
 #Edit
-@student_courses_blueprint.route("/student_courses/<id>/edit")
+@student_courses_blueprint.route("/student_courses/<id>/edit", methods=['POST'])
 def edit_student_course(id):
     student_course = student_course_repository.select(id)
     return render_template("student_courses/edit.html", student_course = student_course)

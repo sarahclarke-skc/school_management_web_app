@@ -13,7 +13,7 @@
             </tr>
             {% for course in courses %}
             <tr>
-            <td>{{course.name}}</td>
+            <td><a href="/courses/{{course.id}}">{{course.name}}</a></td>
             <td>{{course.level}}</td>
             <td>{{course.days}}</td>
             </tr>
@@ -31,6 +31,17 @@
                 </form>
             </div>
         <br>
+
+        <div class="buttons">
+
+            <form class="edit" action="/courses/{{course.id}}/edit" method='GET'>
+                <button class="edit">
+                    <span class="mdi mdi-delete mdi-24px"></span>
+                    <span class="mdi mdi-delete-empty mdi-24px"></span>
+                    <span>Edit</span>
+                  </button>
+            </form>
+        </div>
         {% endfor %}
     </tr>
 </table>

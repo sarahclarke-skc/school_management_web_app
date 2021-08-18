@@ -1,6 +1,49 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Students Enrolled on Course??</h2>
+<h2>{{course.name}}</h2>
+
+<table class="individual-course-display">
+    <tbody>
+    <tr>
+    <td>Course name</td>
+    <td>{{course.name}}</td>
+    </tr>
+    <tr>
+    <td>Level</td>
+    <td>{{course.level}}</td>
+    </tr>
+    <tr>
+    <td>Days</td>
+    <td>{{course.days}}</td>
+    </tr>
+    <tr>
+    <td>Level</td>
+    <td>{{course.level}}</td>
+    </tr>
+    <tr>
+    <td>Start Time</td>
+    <td>{{course.start_time}}</td>
+    </tr>
+    <tr>
+    <td>Duration</td>
+    <td>{{course.duration}}
+    </td>
+    </tr>
+    <tr>
+    <td>Length of Course</td>
+    <td>{{course.length_of_course}}</td>
+    <td>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    
+<br>
+<div id = index-buttons-small>
+    <button><a href="/courses/new">Add New Course</a></button>
+    <button><a href="/courses/{{course.id}}/edit">Edit Courses</a></button>
+    <button><a href="/student_courses/new">Add Student to Course</a></button>
+</div>
 
 {% endblock %}

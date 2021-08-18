@@ -3,10 +3,10 @@
 
 <h2>All Students</h2>
 
-<table class = table>
+<table class="">
     <tr>
         {% for student in students %}
-        <p><a href="/students/{{ student.id }}"> {{student.get_full_name(student)}} </a></p>
+        <p class="all-students-display"><a href="/students/{{ student.id }}"> {{student.get_full_name(student)}} </a></p>
         {% endfor %}
     </tr>
 </table>

@@ -29,8 +29,20 @@
     </form>
 </div>   
 
+<br>
+
+<div class="buttons">
+
+    <form class="delete" action="/student_courses/{{student_course.id}}/edit" method="POST">
+        <button class="edit">
+            <span class="mdi mdi-delete mdi-24px"></span>
+            <span class="mdi mdi-delete-empty mdi-24px"></span>
+            <span>Change Grade</span>
+        </button>
+        </form>
+    </div>   
+
 <hr>
-   <!-- <a href="/student_courses{{student_course.id}}/edit">Edit enrolment</a> -->
    
 {% endfor %}
 

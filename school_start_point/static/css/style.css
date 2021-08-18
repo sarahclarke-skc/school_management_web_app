@@ -5,6 +5,11 @@ body {
     margin: 0px
 }
 
+h2 {
+    text-align: center;
+    color: #004A6E;
+}
+
 /* localhost:5000 */
 
 .button-group button a {
@@ -36,8 +41,21 @@ body {
 
 /* header styling */
 
+.header img {
+    float: left;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .header h1 {
+    position: relative;
+    top: 18px;
+    left: 10px;
+  }
+
 h1 {
     text-align: center;
+    padding-bottom: 10px;
 }
 
 h1 a {
@@ -80,7 +98,7 @@ h1 a {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-}
+} */
 
 li {
     list-style: none;
@@ -98,14 +116,14 @@ li {
 
 /* footer styling */
 
-/* .footer {
+.footer {
     background-color: white;
     bottom: 0;
     flex-direction: row;
     justify-content: space-around;
     position: absolute;
     width: 100%;
-} */
+} 
 
 .links {
     display: flex;
@@ -122,16 +140,17 @@ li {
     text-align: center;
 }
 
-/* forms css - how do you add the link to html?*/
-.add-new-student-form {
-    max-width: 400px;
-    margin: 50px auto;
+.index-buttons-small {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.add-new-student-form {
+
+/* .add-new-student-form {
     display: block;
     padding: 9px;
     border: 1px solid black;
     margin-bottom: 30px;
     border-radius: 3px;
-}
+} */
