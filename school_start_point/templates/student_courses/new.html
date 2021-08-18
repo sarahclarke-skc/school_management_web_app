@@ -2,27 +2,27 @@
 {% block content %}
 
 <h2>Enrol a Student on a Course</h2>
-
-<form action="/student_courses" method='POST'>
-    <div>
-        <label for="student">Student</label>
-        <select name="student" id="student">
-            {% for student in students %}
-            <option value="{{ student.id }}">{{ student.first_name }}</option>
-            {% endfor %}
-        </select>
-    </div>
-    <div>
-        <label for="course">Course</label>
-        <select name="course" id="course">
-            {% for course in courses %}
-            <option value="{{ course.id }}">{{ course.name }}</option>
-            {% endfor %}
-        </select>
-    </div>
-    <div>
-        <input type="submit">
-    </div>
-</form>
+<div class="add-student-to-course">
+    <form action="/student_courses" method='POST'>
+        <div>
+            <label for="student">Student</label>
+            <select class="enrolment-form" name="student" id="student">
+                {% for student in students %}
+                <option value="{{ student.id }}">{{ student.first_name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="course">Course</label>
+            <select class="enrolment-form" name="course" id="course">
+                {% for course in courses %}
+                <option value="{{ course.id }}">{{ course.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <input type="submit" class="action-button">
+    
+    </form>
+</div>
 
 {% endblock %}
