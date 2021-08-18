@@ -4,21 +4,18 @@
 
 <table class="all-courses-table">
     <tr>
+    {% for course in courses %}
         <table>
-            <tbody>
-            <tr>
+            <tr></tr>
             <td>Course name</td>
-            <td>Level</td>
-            <td>Days</td>
-            </tr>
-            {% for course in courses %}
-            <tr>
             <td><a href="/courses/{{course.id}}">{{course.name}}</a></td>
+            <tr></tr>
+            <td>Level</td>
             <td>{{course.level}}</td>
+            <tr></tr>
+            <td>Days</td>
             <td>{{course.days}}</td>
-            </tr>
-            </tbody>
-            </table>
+        </table>
 
             <div class="buttons">
 
@@ -42,9 +39,9 @@
                   </button>
             </form>
         </div>
-        {% endfor %}
     </tr>
 </table>
+{% endfor %}
 
 <div id = index-buttons-small>
     <button><a href="/courses/new">Add New Course</a></button>
