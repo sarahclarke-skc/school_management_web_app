@@ -1,4 +1,4 @@
-# English-language School Management App
+# English Language School Management App
 
 Solo project for CodeClan, built to practise the technologies learnt over the previous weeks - Python, Flask, PostgreSQL, HTML, CSS, Jinja2.
 
